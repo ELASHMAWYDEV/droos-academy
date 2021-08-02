@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
-function App() {
+//Hooks
+import { useBootstrap } from "./hooks";
+import { Login } from "platform/routes";
+
+const App = () => {
+  const { subdomain } = useBootstrap();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {subdomain === "" && (
+        <Switch>
+          <Route exact path="/" component={() => <div>Hello</div>} />
+          <Route exact path="/:type/login" component={Login} />
+        </Switch>
+      )}
+      {subdomain === "admin" && <Switch></Switch>}
+      {subdomain === "student" && <Switch></Switch>}
+      {subdomain === "teacher" && <Switch></Switch>}
+      {subdomain !== "" &&
+        subdomain !== "admin" &&
+        subdomain !== "teacher" &&
+        subdomain !== "student" && <Switch></Switch>}
+    </Router>
   );
-}
+};
 
 export default App;

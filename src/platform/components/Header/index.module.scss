@@ -1,0 +1,38 @@
+@import "~assets/styles/global";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    width: 200px;
+  }
+  .backButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background-color: $primary;
+    color: $white;
+    padding: 8px 20px;
+    border-radius: 30px 4px 4px 30px;
+    cursor: pointer;
+    box-shadow: $boxShadow;
+    transition: 0.2s ease;
+    &:hover {
+      background-color: $primaryLight;
+    }
+    &:active {
+      transition: none;
+      transform: scale(0.95);
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    svg {
+      margin-inline-start: 20px;
+    }
+  }
+}

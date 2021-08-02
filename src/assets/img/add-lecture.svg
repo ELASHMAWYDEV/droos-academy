@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.023" y1="0.906" x2="1.457" y2="-0.498" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f19895"/>
+      <stop offset="0.429" stop-color="#f8ba7d"/>
+      <stop offset="1" stop-color="#ffdc64"/>
+    </linearGradient>
+    <filter id="Ellipse_59" x="0" y="0" width="72" height="72" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_767" data-name="Group 767" transform="translate(-39 -262)">
+    <g transform="matrix(1, 0, 0, 1, 39, 262)" filter="url(#Ellipse_59)">
+      <circle id="Ellipse_59-2" data-name="Ellipse 59" cx="27" cy="27" r="27" transform="translate(9 6)" fill="url(#linear-gradient)"/>
+    </g>
+    <path id="Add_free_icon" data-name="Add free icon" d="M22.61,10.2H15.074a.443.443,0,0,1-.443-.443V2.217a2.217,2.217,0,1,0-4.433,0V9.753a.443.443,0,0,1-.443.443H2.217a2.217,2.217,0,1,0,0,4.433H9.753a.443.443,0,0,1,.443.443V22.61a2.217,2.217,0,1,0,4.433,0V15.074a.443.443,0,0,1,.443-.443H22.61a2.217,2.217,0,1,0,0-4.433Zm0,0" transform="translate(62.586 282.586)" fill="#fff"/>
+  </g>
+</svg>

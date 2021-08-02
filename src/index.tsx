@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from 'App';
+
+document.body.dir = "rtl";
+document.body.lang = "ar";
+document.title = "دروس أكاديمي | أكبر منصة تعليمية في الشرق الأوسط";
+
 
 ReactDOM.render(
   <React.StrictMode>
