@@ -17,13 +17,13 @@ const Header: FC<HeaderProps> = ({ backButtonEnabled, navsEnabled }) => {
   return (
     <header
       className={styles.header}
-      style={{
-        justifyContent: backButtonEnabled
-          ? "space-between"
-          : navsEnabled
-          ? "space-between"
-          : "flex-start",
-      }}
+      // style={{
+      //   justifyContent: backButtonEnabled
+      //     ? "space-between"
+      //     : navsEnabled
+      //     ? "space-between"
+      //     : "flex-start",
+      // }}
     >
       <img alt="دروس أكاديمي" src={Logo} />
       {backButtonEnabled && (
