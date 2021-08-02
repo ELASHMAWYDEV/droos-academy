@@ -27,4 +27,4 @@ yarn-error.log*
 *.css
 *.css.map
 
-*yarn.log
+*yarn.lock
