@@ -15,17 +15,10 @@ const Header: FC<HeaderProps> = ({ backButtonEnabled, navsEnabled }) => {
   const history = useHistory();
 
   return (
-    <header
-      className={styles.header}
-      // style={{
-      //   justifyContent: backButtonEnabled
-      //     ? "space-between"
-      //     : navsEnabled
-      //     ? "space-between"
-      //     : "flex-start",
-      // }}
-    >
-      <img alt="دروس أكاديمي" src={Logo} />
+    <header className={styles.header}>
+      <Link to="/">
+        <img alt="دروس أكاديمي" src={Logo} />
+      </Link>
       {backButtonEnabled && (
         <button className={styles.backButton} onClick={() => history.goBack()}>
           <p>العودة</p>

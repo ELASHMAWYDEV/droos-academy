@@ -5,9 +5,12 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  img {
-    width: 200px;
-    margin-inline-end: auto;
+  a {
+    text-decoration: none;
+    img {
+      width: 200px;
+      margin-inline-end: auto;
+    }
   }
   .backButton {
     display: flex;
