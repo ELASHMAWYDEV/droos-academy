@@ -11,10 +11,7 @@ type HeaderProps = {
   navsEnabled?: boolean;
 };
 
-const Header: FC<HeaderProps> = ({
-  backButtonEnabled = false,
-  navsEnabled = false,
-}) => {
+const Header: FC<HeaderProps> = ({ backButtonEnabled, navsEnabled }) => {
   const history = useHistory();
 
   return (

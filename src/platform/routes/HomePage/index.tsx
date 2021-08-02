@@ -10,9 +10,9 @@ import styles from "./index.module.scss";
 //Assets
 import { ReactComponent as SvgImage } from "assets/img/landing-page-shape.svg";
 
-const LandingPage = () => {
+const HomePage = () => {
   return (
-    <div className={styles.landingPageContainer}>
+    <div className={styles.homePageContainer}>
       <Header navsEnabled />
       <div className={styles.pageContainer}>
         <div className={styles.svgImage}>
@@ -35,4 +35,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default HomePage;
