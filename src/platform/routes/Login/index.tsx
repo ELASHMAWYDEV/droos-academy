@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import styles from "./index.module.scss";
 import { useParams, useHistory } from "react-router-dom";
 
@@ -15,6 +15,11 @@ type Params = {
 const Login = () => {
   const { type } = useParams<Params>();
   const history = useHistory();
+
+  const [userData, setUserData] = useState({
+    phone: "",
+    password: "",
+  });
 
   const typeText = useMemo(() => {
     switch (type) {
@@ -42,11 +47,25 @@ const Login = () => {
           >
             <div>
               <label>رقم الهاتف / البريد الالكتروني</label>
-              <input placeholder="رقم الهاتف / البريد الالكتروني" type="text" />
+              <input
+                placeholder="رقم الهاتف / البريد الالكتروني"
+                type="text"
+                value={userData.phone}
+                onChange={(e) =>
+                  setUserData({ ...userData, phone: e.target.value })
+                }
+              />
             </div>
             <div>
               <label>كلمة المرور</label>
-              <input placeholder="كلمة المرور" type="text" />
+              <input
+                placeholder="كلمة المرور"
+                type="text"
+                value={userData.password}
+                onChange={(e) =>
+                  setUserData({ ...userData, password: e.target.value })
+                }
+              />
             </div>
             <div className={styles.submitBtn}>
               <button type="submit">تسجيل الدخول</button>
