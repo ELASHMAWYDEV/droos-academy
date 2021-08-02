@@ -1,17 +1,20 @@
 //Colors
 $primary: #f18c8e;
 $secondary: #305f72;
-$third: #3498DB;
+$third: #3498db;
 $primaryLight: #f19895;
 $secondaryLight: #386a7e;
 $thirdLight: #49a9e9;
 $textColor: #070404;
 $white: #ffffff;
-$gray: #A5B1C2;
-
+$gray: #a5b1c2;
 
 //Values
-$boxShadow: 0px 2px 10px rgba($color: $textColor, $alpha: 0.2);
+$boxShadow: 0px 2px 10px
+  rgba(
+    $color: $textColor,
+    $alpha: 0.2,
+  );
 
 //Fonts
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap"); //Tajawal => font-family: 'Tajawal', sans-serif;
@@ -114,7 +117,6 @@ body {
 }
 button {
   font-family: "Tajawal", sans-serif;
-
 }
 
 //scrollbar style
@@ -130,8 +132,6 @@ button {
   border-radius: 10px;
 }
 /********************************************************/
-
-//Globals
 
 //display flex
 @mixin flex {
@@ -170,3 +170,124 @@ button {
   height: 2px;
 }
 /**********************************/
+
+@mixin formBox {
+  background-color: $primary;
+  box-shadow: $boxShadow;
+  padding: 25px 20px;
+  border-radius: 8px;
+  width: 350px;
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3,
+  h4 {
+    color: $white;
+    margin-bottom: 25px;
+  }
+  h4 {
+    margin-bottom: 8px;
+    margin-top: 10px;
+    font-weight: 400;
+  }
+  .formContainer {
+    width: 100%;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .submitBtn {
+      margin-top: 30px;
+    }
+    button {
+      background-color: $secondary;
+      color: $white;
+      border: none;
+      border-radius: 4px;
+      width: 50%;
+      align-self: center;
+      cursor: pointer;
+      padding: 5px 20px;
+      font-size: 18px;
+      transition: 0.2s ease;
+      &:hover {
+        background-color: $secondaryLight;
+      }
+      &:active {
+        transition: none;
+        transform: scale(0.95);
+      }
+    }
+    label {
+      color: $white;
+      margin-bottom: 8px;
+    }
+    input {
+      outline: none;
+      border: none;
+      padding: 8px 22px;
+      border-radius: 8px;
+      box-shadow: $boxShadow;
+      border: 2px solid transparent;
+      transition: 0.2s ease;
+      &:focus {
+        border: 2px solid $third;
+      }
+      &::placeholder {
+        color: $gray;
+      }
+    }
+    .selectContainer {
+      position: relative;
+      select {
+        outline: none;
+        border: none;
+        padding: 8px 22px;
+        border-radius: 8px;
+        box-shadow: $boxShadow;
+        border: 2px solid transparent;
+        transition: 0.2s ease;
+        text-align-last: center;
+        -webkit-appearance: none;
+        &:focus {
+          border: 2px solid $third;
+        }
+      }
+      span {
+        position: absolute;
+        left: 10px;
+        top: 52px;
+        display: block;
+        -webkit-transform: translateY(-5px) rotate(0deg);
+        transform: translateY(-5px) rotate(0deg);
+        border: 6px solid transparent;
+        border-top: 8px solid $secondary;
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+        -webkit-transform-origin: 6px 4px;
+        transform-origin: 6px 4px;
+      }
+    }
+  }
+  .goRegisterBtn {
+    background-color: $third;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    align-self: center;
+    cursor: pointer;
+    padding: 5px 20px;
+    font-size: 14px;
+    transition: 0.2s ease;
+    &:hover {
+      background-color: $thirdLight;
+    }
+    &:active {
+      transition: none;
+      transform: scale(0.95);
+    }
+  }
+}

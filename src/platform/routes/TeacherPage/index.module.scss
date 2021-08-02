@@ -1,0 +1,52 @@
+@import "~assets/styles/global";
+
+.teacherPageContainer {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: stretch;
+  background: url("~assets/img/teacher-landing-page-pink-shape.png");
+  background-size: cover;
+  background-position: center center;
+  background-position-x: -100px;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.pageContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-top: 50px;
+}
+
+.svgImage {
+  svg {
+    width: 650px;
+    height: 350px;
+  }
+}
+
+.contentContainer {
+  div {
+    margin: 50px 0;
+    p {
+      color: $primary;
+      line-height: 2.5rem;
+    }
+    p:first-child {
+      font-weight: 900;
+      font-size: 25px;
+    }
+    span {
+      color: $primary;
+    }
+    p:last-child {
+      color: $secondary;
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+}
