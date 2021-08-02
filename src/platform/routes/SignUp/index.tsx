@@ -22,6 +22,7 @@ const SignUp = () => {
     fullName: "",
     phone: "",
     email: "",
+    year: "",
     password: "",
   });
 
@@ -84,7 +85,11 @@ const SignUp = () => {
             </div>
             <div className={styles.selectContainer}>
               <label htmlFor="selectedYear">السنة الدراسية</label>
-              <select>
+              <select
+                onChange={(e) =>
+                  setUserData({ ...userData, year: e.target.value })
+                }
+              >
                 <option
                   value=""
                   disabled
