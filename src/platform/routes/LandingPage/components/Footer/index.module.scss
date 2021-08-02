@@ -1,0 +1,53 @@
+@import "~assets/styles/global";
+
+.footerContainer {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.navButtons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 40px 0;
+    color: $secondary;
+  }
+}
+.buttonsContainer {
+  display: flex;
+
+  a {
+    background-color: $secondary;
+    padding: 8px 60px;
+    margin: 20px 0px 20px 30px;
+    color: $white;
+    box-shadow: $boxShadow;
+    border-radius: 8px;
+    transition: 0.2s ease;
+    text-decoration: none;
+    &:hover {
+      background-color: $secondaryLight;
+    }
+    &:active {
+      transition: none;
+      transform: scale(0.95);
+    }
+  }
+}
+
+.policyContainer{
+    a{
+        text-decoration: none;
+        margin: 0 20px 0 0 ;
+        color: $secondary;
+    }
+}

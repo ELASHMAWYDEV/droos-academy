@@ -1,0 +1,46 @@
+@import "~assets/styles/global";
+
+.landingPageContainer {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url("~assets/img/pink-bg-right.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pageContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-top: 50px;
+}
+
+.svgImage {
+  svg {
+    width: 650px;
+    height: 500px;
+  }
+}
+
+.contentContainer {
+  p {
+    color: $secondary;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 2.9rem;
+    width: 70%;
+    & > span {
+      font-weight: 500;
+      &:nth-child(1) {
+        color: $primary;
+      }
+    }
+
+    &:nth-child(2) {
+      font-weight: 500;
+    }
+  }
+}

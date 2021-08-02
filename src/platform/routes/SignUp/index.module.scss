@@ -1,6 +1,6 @@
 @import "~assets/styles/global";
 
-.loginContainer {
+.signUpContainer {
   padding: 20px 30px;
   display: flex;
   flex-direction: column;
@@ -21,6 +21,6 @@
   }
 }
 
-.loginBox {
+.signUpBox {
   @include formBox;
 }

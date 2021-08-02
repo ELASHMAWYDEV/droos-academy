@@ -1,6 +1,8 @@
 import { useMemo, useState } from "react";
-import styles from "./index.module.scss";
 import { useParams, useHistory } from "react-router-dom";
+
+//Styles
+import styles from "./index.module.scss";
 
 //Components
 import { Header } from "platform/components";
@@ -12,12 +14,14 @@ type Params = {
   type: "student" | "teacher";
 };
 
-const Login = () => {
+const SignUp = () => {
   const { type } = useParams<Params>();
   const history = useHistory();
 
   const [userData, setUserData] = useState({
+    fullName: "",
     phone: "",
+    email: "",
     password: "",
   });
 
@@ -33,28 +37,66 @@ const Login = () => {
   }, [type]);
 
   return (
-    <div className={styles.loginContainer}>
+    <div className={styles.signUpContainer}>
       <Header backButtonEnabled />
       <div className={styles.pageContainer}>
         <div className={styles.svgImage}>
           <SvgImage />
         </div>
-        <div className={styles.loginBox}>
-          <h3>تسجيل الدخول كــ{typeText}</h3>
+        <div className={styles.signUpBox}>
+          <h3>تسجيل حساب جديد كــ{typeText}</h3>
           <form
             className={styles.formContainer}
             onSubmit={(e) => e.preventDefault()}
           >
             <div>
-              <label>رقم الهاتف / البريد الالكتروني</label>
+              <label>الاسم بالكامل</label>
               <input
-                placeholder="رقم الهاتف / البريد الالكتروني"
+                placeholder="الاسم بالكامل"
+                type="text"
+                value={userData.fullName}
+                onChange={(e) =>
+                  setUserData({ ...userData, fullName: e.target.value })
+                }
+              />
+            </div>
+            <div>
+              <label>رقم الهاتف</label>
+              <input
+                placeholder="رقم الهاتف"
                 type="text"
                 value={userData.phone}
                 onChange={(e) =>
                   setUserData({ ...userData, phone: e.target.value })
                 }
               />
+            </div>
+            <div>
+              <label>البريد الالكتروني</label>
+              <input
+                placeholder="البريد الالكتروني"
+                type="text"
+                value={userData.email}
+                onChange={(e) =>
+                  setUserData({ ...userData, email: e.target.value })
+                }
+              />
+            </div>
+            <div className={styles.selectContainer}>
+              <label htmlFor="selectedYear">السنة الدراسية</label>
+              <select>
+                <option
+                  value=""
+                  disabled
+                  selected
+                  unselectable="on"
+                  id="selectedYear"
+                >
+                  اختر السنة الدراسية
+                </option>
+                <option value={1}>1</option>
+              </select>
+              <span></span>
             </div>
             <div>
               <label>كلمة المرور</label>
@@ -66,6 +108,10 @@ const Login = () => {
                   setUserData({ ...userData, password: e.target.value })
                 }
               />
+            </div>
+            <div>
+              <label>تأكيد كلمة المرور</label>
+              <input placeholder="تأكيد كلمة المرور" type="text" />
             </div>
             <div className={styles.submitBtn}>
               <button type="submit">تسجيل الدخول</button>
@@ -79,4 +125,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;

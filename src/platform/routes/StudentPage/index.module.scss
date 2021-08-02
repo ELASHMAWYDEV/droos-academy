@@ -1,0 +1,49 @@
+@import "~assets/styles/_global";
+
+.studentPageContainer {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  //   justify-content: center;
+  align-items: center;
+  background: url("~assets/img/pink-bg-left-with-shapes.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.pageContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-top: 50px;
+}
+
+.svgImage {
+  svg {
+    width: 650px;
+    height: 400px;
+  }
+}
+
+.contentContainer {
+  div {
+    margin: 50px 0;
+    p {
+      color: $secondary;
+      line-height: 2.0rem;
+    }
+    p:first-child {
+      font-weight: 900;
+      font-size: 20px;
+    }
+    span {
+      color: $primary;
+    }
+    p:last-child {
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+}

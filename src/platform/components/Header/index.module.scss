@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   img {
     width: 200px;
   }
@@ -33,6 +34,14 @@
 
     svg {
       margin-inline-start: 20px;
+    }
+  }
+  .navs{
+    display: flex;
+    a {
+      text-decoration: none;
+      margin: 0 20px;
+      color: $secondary;
     }
   }
 }
