@@ -3,7 +3,18 @@ import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
 //Hooks
 import { useBootstrap } from "./hooks";
-import { HomePage, Login, SignUp, StudentPage, TeacherPage } from "platform/routes";
+
+//PLatform Routes
+import {
+  HomePage,
+  Login,
+  SignUp,
+  StudentPage,
+  TeacherPage,
+} from "platform/routes";
+
+//Teacher Routes
+import { Home } from "teacher/routes";
 
 const App = () => {
   const { subdomain } = useBootstrap();
@@ -25,7 +36,11 @@ const App = () => {
       {subdomain !== "" &&
         subdomain !== "admin" &&
         subdomain !== "teacher" &&
-        subdomain !== "student" && <Switch></Switch>}
+        subdomain !== "student" && (
+          <Switch>
+            <Route path="/" component={Home} />
+          </Switch>
+        )}
     </Router>
   );
 };

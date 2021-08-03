@@ -2,6 +2,7 @@
 $primary: #f18c8e;
 $secondary: #305f72;
 $third: #3498db;
+$fourth: #ffc850;
 $primaryLight: #f19895;
 $secondaryLight: #386a7e;
 $thirdLight: #49a9e9;
@@ -169,6 +170,17 @@ button {
   width: 50%;
   height: 2px;
 }
+/**********************************/
+
+@mixin gradientColor($direction) {
+  @if $direction == right {
+    background: linear-gradient(45deg, $fourth 0%, rgba($primary, 0.5) 100%);
+  }
+  @if $direction == left {
+    background: linear-gradient(-45deg, $fourth 0%, rgba($primary, 0.5) 100%);
+  }
+}
+
 /**********************************/
 
 @mixin formBox {
