@@ -6,15 +6,15 @@ import { useBootstrap } from "./hooks";
 
 //PLatform Routes
 import {
-  HomePage,
-  Login,
-  SignUp,
-  StudentPage,
-  TeacherPage,
+  HomePage as PlatformHome,
+  Login as PlatfromLogin,
+  SignUp as PlatformSignUp,
+  StudentPage as PlatfromStudent,
+  TeacherPage as PlatfromTeacher,
 } from "platform/routes";
 
 //Teacher Routes
-import { Home } from "teacher/routes";
+import { Home as TeacherHome } from "teacher/routes";
 
 const App = () => {
   const { subdomain } = useBootstrap();
@@ -23,11 +23,11 @@ const App = () => {
     <Router>
       {subdomain === "" && (
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/:type/login" component={Login} />
-          <Route exact path="/:type/sign-up" component={SignUp} />
-          <Route exact path="/student" component={StudentPage} />
-          <Route exact path="/teacher" component={TeacherPage} />
+          <Route exact path="/" component={PlatformHome} />
+          <Route exact path="/:type/login" component={PlatfromLogin} />
+          <Route exact path="/:type/sign-up" component={PlatformSignUp} />
+          <Route exact path="/student" component={PlatfromStudent} />
+          <Route exact path="/teacher" component={PlatfromTeacher} />
         </Switch>
       )}
       {subdomain === "admin" && <Switch></Switch>}
@@ -38,7 +38,7 @@ const App = () => {
         subdomain !== "teacher" &&
         subdomain !== "student" && (
           <Switch>
-            <Route path="/" component={Home} />
+            <Route path="/" component={TeacherHome} />
           </Switch>
         )}
     </Router>

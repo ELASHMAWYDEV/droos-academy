@@ -173,12 +173,11 @@ button {
 /**********************************/
 
 @mixin gradientColor($direction) {
-  @if $direction == right {
-    background: linear-gradient(45deg, $fourth 0%, rgba($primary, 0.5) 100%);
-  }
-  @if $direction == left {
-    background: linear-gradient(-45deg, $fourth 0%, rgba($primary, 0.5) 100%);
-  }
+  background: linear-gradient(
+    $direction,
+    $fourth 0%,
+    rgba($primary, 0.5) 100%
+  );
 }
 
 /**********************************/

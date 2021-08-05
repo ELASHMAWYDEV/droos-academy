@@ -16,7 +16,7 @@
     text-decoration: none;
     margin-inline-start: 50px;
     color: $white;
-    @include gradientColor(left);
+    @include gradientColor(-45deg);
     box-shadow: $boxShadow;
     border-radius: 30px;
     padding: 8px 25px;
