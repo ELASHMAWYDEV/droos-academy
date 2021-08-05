@@ -1,14 +1,12 @@
 @import "~assets/styles/global";
 
 .footerContainer {
-  padding: 20px 30px 40px;
+  // padding: 20px 30px 40px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  // align-items: flex-end;
+  margin-top: 50px;
+  margin-bottom: auto;
 }
 
 .navButtons {
@@ -27,7 +25,7 @@
 
   a {
     background-color: $secondary;
-    padding: 8px 60px;
+    padding: 8px 100px;
     margin: 20px 0px 20px 30px;
     color: $white;
     box-shadow: $boxShadow;
@@ -44,10 +42,3 @@
   }
 }
 
-.policyContainer{
-    a{
-        text-decoration: none;
-        margin: 0 20px 0 0 ;
-        color: $secondary;
-    }
-}

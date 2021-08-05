@@ -1,19 +1,15 @@
 @import "~assets/styles/global";
 
 .footerContainer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 20px 30px;
   display: flex;
-  align-items: center;
-
+  align-items: flex-start;
+  margin-inline-end: auto;
   div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 50px;
+    margin-inline-end: 50px;
     label {
       color: $secondary;
       margin: 20px 0;

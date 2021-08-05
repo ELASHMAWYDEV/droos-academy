@@ -2,7 +2,7 @@ import React from "react";
 
 //Components
 import { Header } from "platform/components";
-import {Footer} from './components'
+import { Footer } from "./components";
 
 //Styles
 import styles from "./index.module.scss";
@@ -28,9 +28,11 @@ const HomePage = () => {
           <p>
             <span>دروس اكاديمي </span>ستقدم اليك الأفضل
           </p>
+          <div>
+            <Footer />
+          </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
