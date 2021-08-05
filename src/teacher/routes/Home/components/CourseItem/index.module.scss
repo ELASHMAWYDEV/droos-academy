@@ -1,0 +1,100 @@
+@import "~assets/styles/global";
+
+.courseItemContainer {
+  background-color: $white;
+  box-shadow: $boxShadow;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: 0.2s ease;
+  min-width: 300px;
+  text-decoration: none;
+  &:hover {
+    transform: translateY(-3px) scale(1.05);
+    text-decoration: none;
+  }
+  &:active {
+    transition: none;
+    transform: scale(0.95);
+  }
+}
+
+.imgContainer {
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.courseFooter {
+  padding: 12px;
+  h1 {
+    color: $secondary;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 5px;
+    text-align: center;
+  }
+}
+
+.courseInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  & > div {
+    white-space: nowrap;
+    border-radius: 50px;
+    position: relative;
+    box-shadow: $boxShadow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:nth-child(1) {
+      background-color: $secondary;
+      padding-inline-start: 0;
+      padding-inline-end: 15px;
+      border-radius: 0 30px 30px 0;
+      p {
+        direction: ltr;
+        margin-bottom: 0;
+      }
+    }
+    &:nth-child(3) {
+      background-color: $third;
+      padding-inline-start: 15px;
+      padding-inline-end: 0px;
+      border-radius: 30px 0 0 30px;
+      p {
+        direction: ltr;
+        margin-bottom: 0;
+      }
+    }
+    svg {
+      width: 20px;
+      margin: 2px 5px;
+    }
+  }
+}
+
+.teacherInfo {
+  background-color: $primary;
+  border: 1px solid $white;
+  padding: 0px;
+  z-index: 3;
+  padding: 0;
+  padding-left: 20px;
+  margin: 0 -10px;
+  overflow: hidden;
+  img {
+    height: 40px;
+    object-fit: contain;
+  }
+  & > div {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-inline-end: 8px;
+    border: 1px solid $white;
+  }
+}

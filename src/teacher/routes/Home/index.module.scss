@@ -1,0 +1,82 @@
+@import "~assets/styles/global";
+
+.homeContainer {
+  padding: 20px 30px;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.bg {
+  background: url("~assets/img/home-intro-shape.svg");
+  background-size: contain;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 80vh;
+  z-index: -1;
+}
+
+.introContainer {
+  min-height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  & > div {
+    margin: 20px 0;
+    line-height: 1.5rem;
+    h4 {
+      color: $secondary;
+      font-size: 18px;
+    }
+    p {
+      color: $secondary;
+    }
+  }
+}
+
+.homeSvg {
+  margin-top: 25px;
+  svg {
+    width: 350px;
+    height: 385px;
+  }
+}
+
+.teacherInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-start;
+  margin-left: 20px;
+  & > div {
+    box-shadow: $boxShadow;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  span {
+    color: $white;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: right;
+  }
+}
+
+.dashedLine {
+  @include dashLine;
+}
