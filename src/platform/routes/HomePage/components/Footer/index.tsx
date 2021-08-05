@@ -18,10 +18,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={styles.policyContainer}>
-        <Link to="">شروط الاستخدام</Link>
-        <Link to="">سياسة الخصوصية</Link>
-      </div>
     </div>
   );
 };
