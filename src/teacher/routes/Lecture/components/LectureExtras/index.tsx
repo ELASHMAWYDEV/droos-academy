@@ -14,7 +14,7 @@ const LectureExtras = () => {
   return (
     <div className={styles.lectureExtrasContainer}>
       <div className={styles.navs}>
-        <NavLink activeClassName={styles.active} to={`${path}`}>
+        <NavLink activeClassName={styles.active} to={`${path}/teacher's-notes`}>
           ملاحظات المعلم
         </NavLink>
         <NavLink activeClassName={styles.active} to={`${path}/lecture-files`}>
@@ -22,7 +22,7 @@ const LectureExtras = () => {
         </NavLink>
       </div>
       <div className={styles.content}>
-        <Route path={`${path}/`}>
+        <Route  path={`${path}/teacher's-notes`}>
           <p>
             هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
             النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد
