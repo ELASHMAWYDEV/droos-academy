@@ -44,7 +44,7 @@ const LectureDetails = () => {
       </div>
       <div className={styles.teacherDetails}>
         <div className={styles.imgContainer}>
-          <img src={teacherImage} />
+          <img src={teacherImage} alt="teacherImage" />
         </div>
         <span>الأستاذ / مصطفي فريد</span>
       </div>

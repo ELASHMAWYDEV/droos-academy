@@ -36,7 +36,8 @@
     background-color: $primary;
     color: $white;
     border-radius: 30px;
-    padding: 4px 0 4px 4px;
+        padding: 5px 0 5px 7px;
+        
     padding-inline-end: 20px;
     box-shadow: $boxShadow;
 
@@ -44,7 +45,8 @@
         background-color: $fourth;
         margin: 0 0 0 20px;
         border-radius: 50%;
-        padding: 4px;
+        padding: 5px 7px;
+        text-align: center;
     }
   }
 }

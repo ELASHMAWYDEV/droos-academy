@@ -48,10 +48,11 @@
     justify-content: space-evenly;
     border-radius: 30px;
     color: $white;
-    padding: 0px 40px;
+    padding: 0px 20px;
+    padding-inline-end: 40px;
     direction: ltr;
     position: relative;
-    svg{
+    svg {
       width: 35px;
       height: 35px;
       align-self: center;
@@ -85,7 +86,7 @@
   width: 150px;
   height: 150px;
   overflow: hidden;
-
+  margin-bottom: 20px;
   img {
     object-fit: contain;
     width: 100%;

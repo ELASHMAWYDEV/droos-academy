@@ -1,0 +1,48 @@
+@import "~assets/styles/global";
+
+.lecturePartsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 30px;
+  h2 {
+    color: $secondary;
+    font-weight: 800;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.partsContainer {
+  display: flex;
+  flex-direction: column;
+  a {
+    background-color: $lightGray;
+    color: $secondary;
+    padding: 4px 30px;
+    margin: 10px 0;
+    border-radius: 8px;
+    text-decoration: none
+  }
+}
+
+.activeButton {
+  @include gradientColor(45deg);
+  color: $white !important;
+}
+
+.examButton {
+  background: linear-gradient(45deg, $primary 0%, rgba($primary, 0.5) 100%);
+  color: $white !important;
+}
+.videoContainer {
+  background-color: $primary;
+  box-shadow: $boxShadow;
+  min-height: 400px;
+  min-width: 70%;
+}

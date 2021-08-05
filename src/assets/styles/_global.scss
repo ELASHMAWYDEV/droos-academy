@@ -9,6 +9,7 @@ $thirdLight: #49a9e9;
 $textColor: #070404;
 $white: #ffffff;
 $gray: #a5b1c2;
+$lightGray: #f1f2f6;
 
 //Values
 $boxShadow: 0px 2px 10px
@@ -173,11 +174,7 @@ button {
 /**********************************/
 
 @mixin gradientColor($direction) {
-  background: linear-gradient(
-    $direction,
-    $fourth 0%,
-    rgba($primary, 0.5) 100%
-  );
+  background: linear-gradient($direction, $fourth 0%, rgba($primary, 0.5) 100%);
 }
 
 /**********************************/

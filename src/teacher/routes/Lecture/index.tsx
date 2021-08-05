@@ -7,7 +7,7 @@ import styles from "./index.module.scss";
 
 //Components
 import { LectureNavBar as Header } from "teacher/components";
-import { LectureDetails } from "./components";
+import { LectureDetails, LectureParts } from "./components";
 
 const Lecture = () => {
   return (
@@ -15,6 +15,7 @@ const Lecture = () => {
       <Header />
       <LectureDetails />
       <div className={styles.dashedLine}></div>
+      <LectureParts />
     </div>
   );
 };
