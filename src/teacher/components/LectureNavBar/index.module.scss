@@ -1,0 +1,50 @@
+@import "~assets/styles/global";
+
+.lectureNavBarContainer {
+  box-shadow: $boxShadow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.imgContainer {
+  width: 200px;
+  img {
+    width: 100%;
+  }
+}
+
+.navsContainer {
+  display: flex;
+  align-items: center;
+  a {
+    margin: 0 20px;
+    text-decoration: none;
+    @include gradientColor(-50deg);
+    padding: 5px 40px;
+    border-radius: 8px;
+    box-shadow: $boxShadow;
+    color: $white;
+  }
+}
+
+.balanceContainer {
+  display: inline-flex;
+  & > div {
+    margin-inline-start: 40px;
+    background-color: $primary;
+    color: $white;
+    border-radius: 30px;
+    padding: 4px 0 4px 4px;
+    padding-inline-end: 20px;
+    box-shadow: $boxShadow;
+
+    span {
+        background-color: $fourth;
+        margin: 0 0 0 20px;
+        border-radius: 50%;
+        padding: 4px;
+    }
+  }
+}
