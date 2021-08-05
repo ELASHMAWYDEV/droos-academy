@@ -1,0 +1,37 @@
+@import "~assets/styles/global";
+
+.lectureExtrasContainer {
+  margin: 20px 30px;
+  box-shadow: $boxShadow;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.navs {
+  background-color: $lightGray;
+  display: flex;
+  justify-content: center;
+  a {
+    padding: 20px 30px;
+    color: $secondary;
+  }
+}
+
+.active {
+  background-color: $gray;
+  color: $white !important;
+}
+
+.content {
+  padding: 20px 30px;
+  color: $secondary;
+  line-height: 1.9rem;
+}
+
+.filesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  & > div {
+    margin: 5px;
+  }
+}

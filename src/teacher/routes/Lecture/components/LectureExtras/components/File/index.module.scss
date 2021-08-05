@@ -1,0 +1,18 @@
+@import "~assets/styles/global";
+
+.fileContainer {
+  @include gradientColor(150deg);
+  border-radius: 10px;
+  padding: 10px 20px;
+  a {
+    width: 100%;
+    color: $white;
+    text-align: center;
+    svg {
+      font-size: 20px;
+      path {
+        stroke: $white;
+      }
+    }
+  }
+}
