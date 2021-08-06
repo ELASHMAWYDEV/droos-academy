@@ -1,0 +1,98 @@
+@import "~assets/styles/global";
+
+.questionLabel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 15px 0;
+  max-width: 100%;
+  div {
+    margin: 0 5px;
+    background-color: $primary;
+    padding: 5px 10px;
+    border-radius: 50%;
+    text-align: center;
+    color: $white;
+    min-width: 30px;
+  }
+  span {
+    color: $secondary;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: right;
+    overflow-wrap: anywhere;
+  }
+}
+
+.choicesContainer {
+  margin: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: fit-content;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: $secondary;
+  font-size: 18px;
+  font-weight: 400;
+  user-select: none;
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  & > div {
+    margin: 0 35px 0 25px;
+    width: fit-content;
+    color: $secondary;
+    text-align: right;
+  }
+}
+
+.checkMark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  background-color: $third;
+  border-radius: 50%;
+  box-shadow: $boxShadow;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkMark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkMark {
+  background-color: #12699e;
+}
+
+.checkMark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkMark:after {
+  display: block;
+}
+
+.container .checkMark:after {
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #2ecc71;
+}

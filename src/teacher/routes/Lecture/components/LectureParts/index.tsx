@@ -24,10 +24,10 @@ const LectureParts = () => {
           <NavLink to="/lecture/4" activeClassName={styles.activeButton}>
             الجزء الرابع
           </NavLink>
-          <Link to="" className={styles.examButton}>
+          <Link to="/exam" className={styles.examButton}>
             اختبار الجزء الاول
           </Link>
-          <Link to="" className={styles.examButton}>
+          <Link to="/exam" className={styles.examButton}>
             اختبار الجزء الثاني
           </Link>
         </div>
