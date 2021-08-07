@@ -16,6 +16,9 @@ import {
 //Teacher Routes
 import { Home as TeacherHome } from "teacher/routes";
 
+//Student-Dashboard Routes
+import { MyLectures as StudentLectures } from "student-dashboard/routes";
+
 const App = () => {
   const { subdomain } = useBootstrap();
 
@@ -31,7 +34,11 @@ const App = () => {
         </Switch>
       )}
       {subdomain === "admin" && <Switch></Switch>}
-      {subdomain === "student" && <Switch></Switch>}
+      {subdomain === "student" && (
+        <Switch>
+          <Route exact  path="/" component={StudentLectures} />
+        </Switch>
+      )}
       {subdomain === "teacher" && <Switch></Switch>}
       {subdomain !== "" &&
         subdomain !== "admin" &&
