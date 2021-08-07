@@ -1,0 +1,58 @@
+@import "~assets/styles/global";
+
+.lecturesSliderContainer {
+  padding: 50px 30px;
+}
+.lecturesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 60px;
+  padding: 10px 40px;
+}
+
+.navBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    background-color: $primary;
+    border: none;
+    font-size: 22px;
+    padding: 5px 15px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: $boxShadow;
+    font-weight: 600;
+    transform: 0.2s ease;
+    margin: 0 15px ;
+    &:hover {
+      background-color: rgba($primary, 0.8);
+    }
+    &:active {
+      transform: scale(0.96);
+    }
+    &:nth-child(1) {
+      border-radius: 7px 50px 50px 7px;
+    }
+    &:nth-child(2){
+      border-radius: 50px 7px 7px 50px;
+    }
+    &.disabled {
+      background-color: $gray;
+      cursor: default;
+      &:active {
+        transform: none;
+      }
+    }
+  }
+  svg {
+    width: 60px;
+    height: 30px;
+  }
+}

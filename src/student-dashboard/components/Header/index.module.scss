@@ -1,0 +1,86 @@
+@import "~assets/styles/global";
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+  padding: 15px 25px;
+  img {
+    width: 200px;
+  }
+}
+
+.navsContainer {
+  display: flex;
+  align-items: center;
+  a {
+    text-decoration: none;
+    color: $white;
+    background-color: $gray;
+    padding: 8px 30px;
+    margin: 0 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    svg {
+      fill: $white;
+      width: 20px;
+      height: 20px;
+      margin-inline-end: 20px;
+    }
+  }
+}
+.active {
+  @include gradientColor(45deg);
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  & > div {
+    margin-inline-start: 20px;
+  }
+}
+
+.notifications {
+  color: $gray;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  svg {
+    font-size: 25px;
+  }
+  span {
+    position: absolute;
+    top: 0;
+    right: 3px;
+    background-color: $primary;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    color: $white;
+    font-size: 8px;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+.accountInfoContainer {
+  display: flex;
+  align-items: center;
+  color: $gray;
+  cursor: pointer;
+  img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-left: 15px;
+    object-fit: cover;
+  }
+  span {
+    margin-inline-end: 10px;
+  }
+}

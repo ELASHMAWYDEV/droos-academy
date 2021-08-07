@@ -1,0 +1,156 @@
+@import "~assets/styles/global";
+
+.lectureItemContainer {
+  background-color: $white;
+  box-shadow: $boxShadow;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.2s ease;
+  min-width: 250px;
+  direction: ltr;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-3px) scale(1.05);
+  }
+  img {
+    object-fit: contain;
+  }
+  svg {
+    width: 20px;
+    margin: 2px 5px;
+  }
+}
+.header {
+  height: 180px;
+  & > img {
+    // width: 100%;
+    object-fit: contain;
+    height: 100%;
+  }
+  position: relative;
+}
+
+.teacherInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  border-radius: 0 50px 50px 0;
+  padding-left: 20px;
+  color: $white;
+  border-bottom: 1px solid $white;
+  div {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    img {
+      border-radius: 50%;
+      width: 100%;
+      object-fit: cover;
+      border: 1px solid $white;
+    }
+    margin-inline-start: 20px;
+  }
+}
+.subject {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $fourth;
+  width: fit-content;
+  border-bottom-left-radius: 8px;
+  display: flex;
+  align-items: center;
+  color: $white;
+  span {
+    padding: 5px 15px;
+  }
+}
+.date {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  width: fit-content;
+  padding: 5px 15px;
+  border-top-left-radius: 10px;
+  background-color: rgba($secondary, 0.5);
+  color: $white;
+}
+.price {
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+  background-color: $secondary;
+  border-radius: 0 30px 30px 0;
+  width: fit-content;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  color: $white;
+  span {
+    // margin-inline-end: 10px;
+  }
+}
+
+.hours {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: $thirdLight;
+  border-radius: 0 30px 30px 0;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  color: $white;
+  text-align: center;
+  span {
+    margin-inline-end: 15px;
+  }
+}
+
+.footer {
+  padding: 10px 20px;
+  text-align: center;
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: $secondary;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    color: $secondary;
+  }
+}
+.dashLine {
+  @include dashLine;
+  margin: 20px auto;
+}
+
+.watchButton {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  a {
+    display: flex;
+    background-color: $primary;
+    color: $white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    span {
+      background-color: $white;
+      box-shadow: $boxShadow;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      color: $secondary;
+      margin-inline-end: 20px;
+    }
+  }
+}

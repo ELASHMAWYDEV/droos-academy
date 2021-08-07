@@ -1,0 +1,13 @@
+@import "~assets/styles/global";
+
+.footerContainer {
+  background-color: $secondary;
+  padding: 10px 30px;
+  margin-top: auto;
+  color: $white;
+  text-align: left;
+  a {
+    text-decoration: none;
+    color: $fourth;
+  }
+}
