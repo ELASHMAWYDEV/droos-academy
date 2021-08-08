@@ -20,6 +20,7 @@ import { Home as TeacherHome } from "teacher/routes";
 import {
   MyLectures as StudentLectures,
   MyTeachers as StudentTeachers,
+  MyProfile as StudentProfile,
 } from "student-dashboard/routes";
 
 //Student-Dashboard Components
@@ -49,6 +50,7 @@ const App = () => {
             <StudentHeader />
             <Route exact path="/" component={StudentLectures} />
             <Route exact path="/teachers" component={StudentTeachers} />
+            <Route exact path="/profile" component={StudentProfile} />
             <StudentFooter />
           </>
         </Switch>

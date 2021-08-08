@@ -26,7 +26,7 @@ const Header = () => {
           <Teachers />
           المعلمين
         </NavLink>
-        <NavLink activeClassName={styles.active} exact to="/my-account">
+        <NavLink activeClassName={styles.active} exact to="/profile">
           <GraducationCap />
           حسابي
         </NavLink>
