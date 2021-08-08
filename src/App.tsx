@@ -17,7 +17,16 @@ import {
 import { Home as TeacherHome } from "teacher/routes";
 
 //Student-Dashboard Routes
-import { MyLectures as StudentLectures } from "student-dashboard/routes";
+import {
+  MyLectures as StudentLectures,
+  MyTeachers as StudentTeachers,
+} from "student-dashboard/routes";
+
+//Student-Dashboard Components
+import {
+  Header as StudentHeader,
+  Footer as StudentFooter,
+} from "student-dashboard/components";
 
 const App = () => {
   const { subdomain } = useBootstrap();
@@ -36,7 +45,12 @@ const App = () => {
       {subdomain === "admin" && <Switch></Switch>}
       {subdomain === "student" && (
         <Switch>
-          <Route exact  path="/" component={StudentLectures} />
+          <>
+            <StudentHeader />
+            <Route exact path="/" component={StudentLectures} />
+            <Route exact path="/teachers" component={StudentTeachers} />
+            <StudentFooter />
+          </>
         </Switch>
       )}
       {subdomain === "teacher" && <Switch></Switch>}
@@ -45,7 +59,7 @@ const App = () => {
         subdomain !== "teacher" &&
         subdomain !== "student" && (
           <Switch>
-            <Route path="/" component={TeacherHome} />
+            <Route exact path="/" component={TeacherHome} />
           </Switch>
         )}
     </Router>

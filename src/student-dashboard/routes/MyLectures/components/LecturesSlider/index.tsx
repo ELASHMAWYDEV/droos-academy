@@ -22,16 +22,6 @@ const LecturesSlider = () => {
         <LectureItem />
         <LectureItem />
       </div>
-      <div className={styles.navBtns}>
-        <button>
-          <BsArrowRight />
-          <span>التالي</span>
-        </button>
-        <button className={styles.disabled}>
-          <span>السابق</span>
-          <BsArrowLeft />
-        </button>
-      </div>
     </div>
   );
 };

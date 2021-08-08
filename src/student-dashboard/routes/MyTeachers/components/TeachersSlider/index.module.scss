@@ -1,0 +1,9 @@
+@import "~assets/styles/global";
+
+.teachersSliderContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 80px;
+  row-gap: 120px;
+  padding: 10px 80px;
+}

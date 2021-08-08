@@ -18,15 +18,15 @@ const Header = () => {
     <header className={styles.headerContainer}>
       <img src={Logo} alt="Logo" />
       <div className={styles.navsContainer}>
-        <NavLink activeClassName={styles.active} to="/">
+        <NavLink activeClassName={styles.active} exact to="/">
           <Lectures />
           محاضراتي
         </NavLink>
-        <NavLink activeClassName={styles.active} to="/teachers">
+        <NavLink activeClassName={styles.active} exact to="/teachers">
           <Teachers />
           المعلمين
         </NavLink>
-        <NavLink activeClassName={styles.active} to="/my-account">
+        <NavLink activeClassName={styles.active} exact to="/my-account">
           <GraducationCap />
           حسابي
         </NavLink>
