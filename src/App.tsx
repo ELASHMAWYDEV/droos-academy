@@ -21,6 +21,7 @@ import {
   MyLectures as StudentLectures,
   MyTeachers as StudentTeachers,
   MyProfile as StudentProfile,
+  AddCredit as StudentPayment,
 } from "student-dashboard/routes";
 
 //Student-Dashboard Components
@@ -51,6 +52,7 @@ const App = () => {
             <Route exact path="/" component={StudentLectures} />
             <Route exact path="/teachers" component={StudentTeachers} />
             <Route exact path="/profile" component={StudentProfile} />
+            <Route exact path="/add-credit" component={StudentPayment} />
             <StudentFooter />
           </>
         </Switch>

@@ -7,6 +7,7 @@ import styles from "./index.module.scss";
 
 //Assets
 import ProfilePic from "assets/img/profile-pic.jpg";
+import { Link } from "react-router-dom";
 
 const MyProfile = () => {
   return (
@@ -22,7 +23,9 @@ const MyProfile = () => {
                 <span>L.E</span>
               </div>
             </div>
-            <button>شحن رصيد</button>
+            <Link to="/add-credit">
+              <button>شحن رصيد</button>
+            </Link>
           </div>
           <div>
             <div>

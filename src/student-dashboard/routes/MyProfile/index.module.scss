@@ -36,6 +36,9 @@
   justify-content: space-between;
   align-items: center;
   & > div {
+    a{
+      text-decoration: none;
+    }
     button {
       background-color: $third;
       border: none;
