@@ -1,0 +1,23 @@
+@import "~assets/styles/global";
+
+.fileContainer {
+  text-align: center;
+  margin: 20px;
+  padding: 15px;
+  box-shadow: $boxShadow;
+  @include gradientColor(110deg);
+  width: 150px;
+  border-radius: 8px;
+  svg {
+    color: red;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+  }
+  margin-bottom: 10px;
+  div {
+    color: $white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}

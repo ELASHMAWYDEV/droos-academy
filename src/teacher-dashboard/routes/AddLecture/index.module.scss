@@ -1,0 +1,152 @@
+@import "~assets/styles/global";
+
+.addLecture {
+  text-align: center;
+  background-color: rgba($gray, 0.2);
+  padding: 40px 30px;
+  h2 {
+    color: $secondary;
+    font-weight: 900;
+    font-size: 20px;
+  }
+}
+
+.container {
+  margin: 40px 0;
+  padding: 20px 30px;
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: $boxShadow;
+}
+
+.lectureStatus {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  & > span {
+    margin-inline-end: 20px;
+    color: $secondary;
+  }
+  select {
+    border-radius: 10px;
+    box-shadow: $boxShadow;
+    padding: 10px 30px;
+    min-width: 180px;
+    background-color: $secondary;
+    text-align-last: center;
+    color: $white;
+    border: none;
+    outline: none;
+    width: 90%;
+    -webkit-appearance: none;
+  }
+  div {
+    position: relative;
+    span {
+      position: absolute;
+      left: 15px;
+      top: 55%;
+      transform: translateY(-5px) rotate(0deg);
+      border: 5px solid transparent;
+      border-top: 7px solid $white;
+      transition: 0.3s ease;
+      transform-origin: 6px 4px;
+    }
+  }
+}
+
+.lectureDetails {
+  & > div {
+    width: 100%;
+    margin: 20px 0;
+    label {
+      display: block;
+      color: $secondary;
+      font-weight: 500;
+      text-align: right;
+    }
+    input {
+      width: 100%;
+      border: none;
+      outline: none;
+      box-shadow: $boxShadow;
+      padding: 8px 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+
+    &:nth-child(3) {
+      display: flex;
+      justify-content: space-between;
+      & > div {
+        &:nth-child(2) {
+          width: 70%;
+        }
+        &:nth-child(1) {
+          select {
+            border-radius: 10px;
+            box-shadow: $boxShadow;
+            padding: 10px 30px;
+            min-width: 180px;
+            background-color: $secondary;
+            text-align-last: center;
+            color: $white;
+            border: none;
+            outline: none;
+            width: 100%;
+            -webkit-appearance: none;
+          }
+          div {
+            position: relative;
+            margin: 10px 0;
+
+            span {
+              position: absolute;
+              left: 15px;
+              top: 55%;
+              transform: translateY(-5px) rotate(0deg);
+              border: 5px solid transparent;
+              border-top: 7px solid $white;
+              transition: 0.3s ease;
+              transform-origin: 6px 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dashLine {
+  @include dashLine;
+  width: 70%;
+}
+
+.filesContainer {
+  & > div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.uploadFile {
+  text-align: center;
+  margin: 20px;
+  padding: 15px 25px;
+  box-shadow: $boxShadow;
+  background-color: rgba($gray, 0.8);
+  width: 170px;
+  border-radius: 8px;
+  svg {
+    color: $white;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+  }
+  margin-bottom: 10px;
+  div {
+    color: $white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
